@@ -79,6 +79,21 @@ def main():
     print("3. Exit the Game")
     user_inp = int(input("Enter your choice (1/2/3): "))
 
-   
+   # This loop is running from that time user wants to play the game.
+    # when the user select 3 as a choice (means exit the game) then that time loop terminate.
+    while user_inp != 3:
+        if user_inp == 1:
+            print("Maze with Path:")
+            MazeSolver(0,1,n,array)
+            print_array(array)
+
+        elif user_inp == 2:
+            array = generate_array(n)
+            print_array(array)
+
+        print("1. Print the Path")
+        print("2. Generate another puzzle")
+        print("3. Exit the Game")
+        user_inp = int(input("Enter your choice (1/2/3): "))
 
 main()
