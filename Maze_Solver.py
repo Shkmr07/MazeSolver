@@ -59,4 +59,8 @@ def print_array(array):
         for j in range(len(array)):
             print(array[i][j],end=" | ")
         print()
- 
+        
+    st = ""
+    for j in range(len(array)):
+        st+="+---"
+    print(colored(st+"+","red"))
