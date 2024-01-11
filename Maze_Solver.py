@@ -46,3 +46,17 @@ def generate_array(n):
         ones_count += 1
 
     return array
+
+def print_array(array):
+    # Here, creating a grid in such a way the output looks nice with the help of string concatenation.
+    for i in range(len(array)):
+        st = ""
+        for j in range(len(array)):
+            st+= "+---"
+        print(colored(st+"+","red"))
+        print("| ",end="")
+
+        for j in range(len(array)):
+            print(array[i][j],end=" | ")
+        print()
+ 
