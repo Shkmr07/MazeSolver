@@ -1,6 +1,24 @@
 import random
 from termcolor import colored
 
+def MazeSolver(i,j,n,array,visited=[]):
+    # This conditions checking the position is vaild or not
+    if i < 0 or j < 0 or j == n or i == n or  array[i][j] == colored("▓", "red") or [i,j] in visited:
+        return False
+    # This conditions is for sucessfully reach at exit point
+    if i == n-1 and j == n-1: return True
+    
+    # Rest all conditions is for checking all four directions
+    visited.append([i,j])
+    array[i][j] = colored("◍", "green")
+
+    ans = (MazeSolver(i,j+1,n,array,visited) or MazeSolver(i+1,j,n,array,visited) or MazeSolver(i,j-1,n,array,visited) or MazeSolver(i-1,j,n,array,visited))
+    visited.pop()
+
+    if ans == False: array[i][j] = colored("◌", "blue")
+    
+    return ans
+
 
 def generate_array(n):
     # Initialize a 2D array with n rows and n columns
