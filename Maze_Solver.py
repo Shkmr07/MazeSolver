@@ -59,8 +59,26 @@ def print_array(array):
         for j in range(len(array)):
             print(array[i][j],end=" | ")
         print()
-        
+
     st = ""
     for j in range(len(array)):
         st+="+---"
     print(colored(st+"+","red"))
+
+def main():
+    # Ask the user for the size of the array (n x n) along with printing random generated maze.
+        
+    n = int(input("Enter the size of the Maze (n x n): "))
+    print("Generated Maze:")
+    array = generate_array(n)
+    print_array(array)
+
+    # Giving options for user whatever it wants  
+    print("1. Print the Path")
+    print("2. Generate another puzzle")
+    print("3. Exit the Game")
+    user_inp = int(input("Enter your choice (1/2/3): "))
+
+   
+
+main()
