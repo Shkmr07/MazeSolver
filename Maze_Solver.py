@@ -88,6 +88,7 @@ def main():
             print_array(array)
 
         elif user_inp == 2:
+            n = int(input("Enter the size of the Maze (n x n): "))
             array = generate_array(n)
             print_array(array)
 
