@@ -12,4 +12,5 @@ The maze solver uses the Depth-First Search (DFS) algorithm to find a path throu
 ## Output
 The solvable maze is printed to the terminal. The path found by the DFS algorithm is marked for easy visualization.
 
-![MazeSolver](https://github.com/Shkmr07/MazeSolver/assets/113815453/d9baa493-3538-4295-afd3-63b4d5566730)
+![maze solver](https://github.com/Shkmr07/MazeSolver/assets/113815453/258a13a9-7dfc-4755-9916-1161f8ea7b13)
+
